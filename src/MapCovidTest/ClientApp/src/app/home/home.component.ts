@@ -2,7 +2,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { VoxelmapMapService } from '../services/voxelmap-map.service';
 import { environment } from '../../environments/environment';
 import * as L from 'leaflet';
-import { Global, CovidServiceResponse, Country, CovidResponse, Feature } from '../models/covid-service-response';
+import {CovidResponse, Feature } from '../models/covid-service-response';
 
 
 @Component({

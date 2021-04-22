@@ -5,10 +5,9 @@
 export const environment = {
   production: false,
 
-  //countriesInformation: "assets/data/countries-lat-lang.json",
-
-  covidAPI: "https://api.covid19api.com/summary",
   leafetTiles: "https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png"
+
+  //"https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png
 
 };
 

@@ -23,7 +23,7 @@ export class VoxelmapMapService {
       if (c.attributes.lat != undefined) {
 
         const marker = L.marker([c.attributes.lat, c.attributes.long]).addTo(map);
-        marker.bindPopup(`<p>${c.attributes.countryRegion}, ${c.attributes.isO3}</p><br/>
+        marker.bindPopup(`<p> ${c.attributes.countryRegion}, ${c.attributes.isO3}</p><br/>
           <p>Total Case Confirmed: ${c.attributes.confirmed}</p><br/>
           <p>Total Deaths for COVID-19: ${c.attributes.deaths}</p><br/>
           <p>Total Recovered: ${c.attributes.recovered}</p><br/>
@@ -36,15 +36,6 @@ export class VoxelmapMapService {
         
       })
     
-  }
-
-  
-  GetAllCountries(){
-    return CountryInfo;
-  }
-
-  GetCovidInfo(): Observable<any> {
-    return this.request.getServer(environment.covidAPI);
   }
 
   GetCovidInfonew(): Observable<any> {

@@ -24,8 +24,8 @@ code {
   bottom: 0;
   left: 0;
   margin: 10%;
-  margin-left:50%;
-  width:50%;
+  margin-left: 50%;
+  width: 50%;
 }
 
 .map-opacity {
@@ -34,8 +34,7 @@ code {
 
 body, html {
   /* The image used */
-  background-image: url('assets\img\covid-19-1190x574-2-full.jpg');
-
+  background-color: #D2CEF0;
   /* Full height */
   height: 100%;
   /* Center and scale the image nicely */
