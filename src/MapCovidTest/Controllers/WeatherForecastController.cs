@@ -51,9 +51,7 @@ namespace VoxelmapsTask1WebApp.Controllers
         public async Task<ActionResult<dynamic>> GetCovidInfoAsync()
         {
 
-            CovidResponse PullRequests = new CovidResponse();
-
-   
+            CovidResponse PullRequests = new CovidResponse();            
             PullRequests = await _clientFactory.GetAsync<CovidResponse>("https://services1.arcgis.com/0MSEUqKaxRlEPj5g/arcgis/rest/services/ncov_cases2_v1/FeatureServer/2/query?where=1%3D1&outFields=Country_Region,Lat,Long_,Confirmed,Deaths,Recovered,UID,ISO3&returnGeometry=false&outSR=4326&f=json");
 
 

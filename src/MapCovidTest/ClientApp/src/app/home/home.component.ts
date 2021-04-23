@@ -26,10 +26,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   private initMap() {
-    this.covidMap = L.map('map').setView([18.979026, 321.783834], 5);
+    this.covidMap = L.map('map').setView([19.4978, -99.1269], 5);
     const tiles = L.tileLayer(environment.leafetTiles, {
-      maxZoom: 10,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      maxZoom: 10
     });
     tiles.addTo(this.covidMap);
    

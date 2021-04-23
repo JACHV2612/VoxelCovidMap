@@ -60,8 +60,8 @@ export class Attributes {
   long: string;
   confirmed: number;
   deaths: number;
-  recovered?: number;
-  uid: number;
+  recovered?: number;  
+  uid: number;  
   isO3: string;
 }
 

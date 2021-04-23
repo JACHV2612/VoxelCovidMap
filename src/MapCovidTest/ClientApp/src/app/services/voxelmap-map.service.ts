@@ -17,7 +17,7 @@ export class VoxelmapMapService {
     this.url = baseUrl;
   }
 
-  public addMarkers(map: L.map, countries: Array<Feature>){
+  public addMarkers(map: L.map, countries: Array<Feature>) {
     countries.map((c: Feature) => {
 
       if (c.attributes.lat != undefined) {
@@ -31,11 +31,11 @@ export class VoxelmapMapService {
       } else {
         console.log(c.attributes);
       }
-            
-          
-        
-      })
-    
+
+
+
+    })
+
   }
 
   GetCovidInfonew(): Observable<any> {
