@@ -1,10 +1,10 @@
 
 export class CovidServiceResponse {
-  ID: string
-  Message: string
-  Global: Global
-  Countries: Country[]
-  Date: string
+  //ID: string
+  //Message: string
+  //Global: Global
+  //Countries: Country[]
+  //Date: string
 }
 
 export class Global {

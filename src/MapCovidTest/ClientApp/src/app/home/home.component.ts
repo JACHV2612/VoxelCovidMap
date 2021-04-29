@@ -26,12 +26,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   private initMap() {
-    this.covidMap = L.map('map').setView([19.4978, -99.1269], 5);
+    //this.covidMap = L.map('map').setView([19.4978, -99.1269], 5);
+    this.covidMap = L.map('map').setView([0, 0], 0);
     const tiles = L.tileLayer(environment.leafetTiles, {
-      maxZoom: 10
+      maxZoom: 6,
+      minZoom: 2,
+      zoomSnap: 0.25
     });
-    tiles.addTo(this.covidMap);
-   
+    tiles.addTo(this.covidMap); 
   }
 
   GetPanelInfo() {

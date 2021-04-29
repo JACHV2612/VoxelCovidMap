@@ -1,7 +1,7 @@
-import { Inject, Injectable } from '@angular/core';
+import { Attribute, Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { VoxelmapRequestService } from './voxelmap-request.service';
-import { CovidServiceResponse, Country, Feature } from '../models/covid-service-response';
+import { CovidServiceResponse, Country, Feature, Attributes } from '../models/covid-service-response';
 import { HttpClient } from '@angular/common/http';
 import * as L from 'leaflet';
 import { environment } from '../../environments/environment';
@@ -22,6 +22,11 @@ export class VoxelmapMapService {
 
       if (c.attributes.lat != undefined) {
 
+        //var arrayCountries;
+        //arrayCountries = [Feature.];
+
+        //arrayCountries.sort();
+
         const marker = L.marker([c.attributes.lat, c.attributes.long]).addTo(map);
         marker.bindPopup(`<p> ${c.attributes.countryRegion}, ${c.attributes.isO3}</p><br/>
           <p>Total Case Confirmed: ${c.attributes.confirmed}</p><br/>
@@ -32,8 +37,6 @@ export class VoxelmapMapService {
         console.log(c.attributes);
       }
 
-
-
     })
 
   }
@@ -41,6 +44,4 @@ export class VoxelmapMapService {
   GetCovidInfonew(): Observable<any> {
     return this.request.getServer(this.url + 'weatherforecast/Covid');
   }
-
-
 }
